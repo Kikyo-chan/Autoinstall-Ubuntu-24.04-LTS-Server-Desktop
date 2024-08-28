@@ -218,12 +218,14 @@ autoinstall:
      boot || goto failed
      ```
  ### Other
-  1. Preview of system files and directories at deployment：
-     24.04_live_server：
+  1. 24.04_live_server Preview of system files and directories at deployment：
       ![image](https://github.com/user-attachments/assets/53763127-7a58-4f45-9f17-fe9ef858e5b6)
+     
+  2. 24.04_live_noble-desktop Preview of system files and directories at deployment：
+     ![image](https://github.com/user-attachments/assets/07e5a623-8418-42ea-a26b-a53be429da25)
 
-    24.04_live_noble-desktopr：
-    ![image](https://github.com/user-attachments/assets/793d9dcc-7c14-4490-8881-4c953045760d)
+  4. 5
+
 
 
 
