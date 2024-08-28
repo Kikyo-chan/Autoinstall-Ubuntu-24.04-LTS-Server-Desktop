@@ -198,6 +198,7 @@ autoinstall:
 ```
   ### PXE Config## 
   1. Ubuntu24.04 LTS Desktop PXE Config
+     ```yaml
      set base-url http://172.17.100.221/iso/ubuntu/24.04_desktop/noble-desktop
      kernel ${base-url}/casper/vmlinuz
      initrd ${base-url}/casper/initrd
@@ -205,8 +206,9 @@ autoinstall:
      imgargs vmlinuz initrd=initrd ip=dhcp root=/dev/ram0 ramdisk_size=8388608 cloud-config-url=/dev/null url=${ubuntu_iso_url} autoinstall ds=nocloud-net;s=${base-url}/
      #imgargs vmlinuz initrd=initrd ip=dhcp root=/dev/ram0 ramdisk_size=8388608 url=${ubuntu_iso_url} autoinstall ds=nocloud-net;s=${base-url}/
      boot || goto failed
-     
+     ```
   3. Ubuntu24.04 LTS Server PXE Config
+     ```yaml
      set base-url http://172.17.100.221/iso/ubuntu/24.04_live_server
      kernel ${base-url}/casper/vmlinuz
      initrd ${base-url}/casper/initrd
@@ -214,7 +216,7 @@ autoinstall:
      #imgargs vmlinuz initrd=initrd ip=dhcp root=/dev/ram0 ramdisk_size=1688608 url=${ubuntu_iso_url} autoinstall ds=nocloud-net;s=${base-url}/
      imgargs vmlinuz initrd=initrd ip=dhcp cloud-config-url=/dev/null url=${ubuntu_iso_url} autoinstall ds=nocloud-net;s=${base-url}/
      boot || goto failed
-     
+     ```
   5. 5
   6. 6
 
