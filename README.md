@@ -196,7 +196,7 @@ autoinstall:
     - reboot
   version: 1
 ```
-  ### PXE Config## 
+  ### PXE Config
   1. Ubuntu24.04 LTS Desktop PXE Config
      ```yaml
      set base-url http://172.17.100.221/iso/ubuntu/24.04_desktop/noble-desktop
