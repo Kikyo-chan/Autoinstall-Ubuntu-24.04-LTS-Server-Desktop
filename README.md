@@ -196,8 +196,8 @@ autoinstall:
     - reboot
   version: 1
 ```
-  ### PXE Config
-  1. Ubuntu24.04 LTS Desktop PXE Config
+  ### PXE&iPXE BOOT Config
+  1. Ubuntu24.04 LTS Desktop PXE&iPXE BOOT Config
      ```yaml
      set base-url http://172.17.100.221/iso/ubuntu/24.04_desktop/noble-desktop
      kernel ${base-url}/casper/vmlinuz
@@ -207,7 +207,7 @@ autoinstall:
      #imgargs vmlinuz initrd=initrd ip=dhcp root=/dev/ram0 ramdisk_size=8388608 url=${ubuntu_iso_url} autoinstall ds=nocloud-net;s=${base-url}/
      boot || goto failed
      ```
-  3. Ubuntu24.04 LTS Server PXE Config
+  2. Ubuntu24.04 LTS Server PXE&iPXE BOOT Config
      ```yaml
      set base-url http://172.17.100.221/iso/ubuntu/24.04_live_server
      kernel ${base-url}/casper/vmlinuz
@@ -217,7 +217,15 @@ autoinstall:
      imgargs vmlinuz initrd=initrd ip=dhcp cloud-config-url=/dev/null url=${ubuntu_iso_url} autoinstall ds=nocloud-net;s=${base-url}/
      boot || goto failed
      ```
-  5. 5
+ ### Other
+  1. Preview of system files and directories at deployment：
+     24.04_live_server：
+      ![image](https://github.com/user-attachments/assets/53763127-7a58-4f45-9f17-fe9ef858e5b6)
+
+    24.04_live_noble-desktopr：
+     ![image](https://github.com/user-attachments/assets/7219c02f-64ef-4360-ba5d-7aafba641d95)
+     
+
   6. 6
 
 
