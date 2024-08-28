@@ -16,6 +16,7 @@ For more information on Autoinstall, please see:
 * [Automated Server Installs Config File Reference](https://ubuntu.com/server/docs/install/autoinstall-reference)
 
 ## Ubuntu24.04 LTS Desktop Autoinstall (user-data)
+```yaml
 #cloud-config
 # See the autoinstall documentation at:
 # https://canonical-subiquity.readthedocs-hosted.com/en/latest/reference/autoinstall-reference.html
@@ -98,8 +99,9 @@ autoinstall:
     - curtin in-target --target=/target -- sudo usermod -p '$6$jMIpAD1dGkm6sqfJ$HF6uWZp3lbYMjyI3jWUE1j51R9sqCkX8tjrp3xut2AWs3r2Ou9JGyZu1Xr7D3VF3B4X2gYCfjQatKoxAbDGSu0' root
     - reboot
   version: 1
-
+```
 ## Ubuntu24.04 LTS Server Autoinstall(user-data)
+```yaml
 #cloud-config
 autoinstall:
   refresh-installer:
@@ -193,7 +195,7 @@ autoinstall:
     - curtin in-target --target=/target -- echo "Please wait...will reboot automatically"
     - reboot
   version: 1
-
+```
   ### PXE Config## 
   1. Ubuntu24.04 LTS Desktop PXE Config
      set base-url http://172.17.100.221/iso/ubuntu/24.04_desktop/noble-desktop
