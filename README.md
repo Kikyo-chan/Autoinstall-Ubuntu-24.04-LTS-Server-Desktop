@@ -223,9 +223,7 @@ autoinstall:
       ![image](https://github.com/user-attachments/assets/53763127-7a58-4f45-9f17-fe9ef858e5b6)
 
     24.04_live_noble-desktopr：
-     ![image](https://github.com/user-attachments/assets/7219c02f-64ef-4360-ba5d-7aafba641d95)
-     
+    ![image](https://github.com/user-attachments/assets/793d9dcc-7c14-4490-8881-4c953045760d)
 
-  6. 6
 
 
