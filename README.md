@@ -18,9 +18,14 @@ For more information on Autoinstall, please see:
 ## About Ubuntu24.04 Desktop automated installation  <br>
   I saw a lot of similar technical documents, there is no way to realize the real automation process, they are all through the url way to specify the autoinstall.yaml file to achieve, after I tested and found that Ubuntu24.04 Desktop completely unattended fully automated installation, namely I found that Ubuntu24.04 Desktop can be fully automated unattended installation, that is, userdata and meta-data to answer and start the installer, only that during the automatic installation of Ubuntu24.04 Desktop, it still pops up the GUI installation interface, but it will be executed automatically, that is, after booting from PXE or IPXE, the installer will pop up automatically to finish automatically, and then it will finish automatically according to the file “userdata”. userdata” file, it will reboot automatically, and then you can see the ubuntu desktop.
 You can also view the installation log during the whole automated installation process as shown below:
+   **1.start the installation program**：
   ![image](https://github.com/user-attachments/assets/fc11a0f2-5d6f-4c92-b446-e19fcdc5847b)
+   **2.Automatic reboot after installation is complete (takes about 20-30 minutes)**
   ![image](https://github.com/user-attachments/assets/c00f85db-f245-4f7a-8183-5764e93fedb8)
+   **3.after power on：**
   ![image](https://github.com/user-attachments/assets/5ff1eda1-a7a2-4998-9824-bc9ee0a4e687)
+  ![image](https://github.com/user-attachments/assets/36c4c3eb-e8df-4653-a5f2-c7f155d22891)
+
 
 
 
