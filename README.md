@@ -227,19 +227,25 @@ autoinstall:
      boot || goto failed
      ```
  ### Other
-  1. 24.04_live_server Preview of system files and directories at deployment：
+   1. VMware virtual machines and configurations used for testing:
+      ![image](https://github.com/user-attachments/assets/056d860c-12a9-4e99-8ce8-14c1c8f6fbc8)
+      ![image](https://github.com/user-attachments/assets/12df8197-2219-45c0-a100-e341995960f4)
+
+
+  2. 24.04_live_server Preview of system files and directories at deployment：
       ![image](https://github.com/user-attachments/assets/53763127-7a58-4f45-9f17-fe9ef858e5b6)
      
-  2. 24.04_live_noble-desktop Preview of system files and directories at deployment：
+  3. 24.04_live_noble-desktop Preview of system files and directories at deployment：
      ![image](https://github.com/user-attachments/assets/07e5a623-8418-42ea-a26b-a53be429da25)
 
-  4. 5
+  4. ........
+     
  ### Issues Summary
   1. When I changed the apt installation source to my own internal address: http://172.17.80.238/ubuntu/, I found that the installation would sometimes fail, which could be due to a problem with the installation source server that I deployed internally using “apt mirror”, for example, the installation source failed to download some files. This may be due to a problem with the installation source server I deployed using “apt mirror” internally, for example, some files in the installation source failed to download, causing the installation source to be incomplete.
   
   2. Older computers are not supported。
-     I in the VMware virtual machine to test automated ubuntu 24.04 desktop installation, the configuration of the virtual machine (16G + 16CPU + 100GHD), found that in the VMware virtualization environment can be installed successfully; but I changed to a laptop (my laptop is older, the model is Lenovo ThinkPad X260, it is) The configuration of my laptop is (cpu: i3-6100u, Memory: 8G; Samsung 870 SSD500G), let the laptop boot from PXE, and finally the installer is stuck at “PreparingUbuntu.....”. I've tested this several times, and this is what happens. I'm analyzing that my laptop is too low-configured, and that ubuntu 24.04 doesn't support older computers when automating deployments with Cloud-Init and Subiquity?
-In this case, I tested it on my newer DELL 3640 desktop computer (my DELL 3640 desktop computer configuration: cpu:i5, Memory: 16G; Samsung 870 SSD500G), and found that my DELL desktop computer can also be installed normally, so what's the problem
+     I in the VMware virtual machine to test automated ubuntu 24.04 desktop installation, the configuration of the virtual machine (16G + 16CPU + 100G HD), found that in the VMware virtualization environment can be installed successfully; but I changed to a laptop (my laptop is older, the model is Lenovo ThinkPad X260, it is) The configuration of my laptop is (cpu: i3-6100u, Memory: 8G; Samsung 870 SSD 500G), let the laptop boot from PXE, and finally the installer is stuck at “PreparingUbuntu.....”. I've tested this several times, and this is what happens. I'm analyzing that my laptop is too low-configured, and that ubuntu 24.04 doesn't support older computers when automating deployments with Cloud-Init and Subiquity?
+In this case, I tested it on my newer DELL3640 Desktop computer (my DELL3640 desktop computer configuration: cpu:i5, Memory: 16G; Samsung870 SSD 500G), and found that my DELL desktop computer can also be installed normally, so what's the problem
 ![image](https://github.com/user-attachments/assets/0b73af60-9676-416e-95a4-7c71752f8faa)
 
 
