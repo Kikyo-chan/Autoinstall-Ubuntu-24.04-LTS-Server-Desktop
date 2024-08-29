@@ -25,6 +25,8 @@ You can also view the installation log during the whole automated installation p
    **3.after power on：** <br>
   ![image](https://github.com/user-attachments/assets/5ff1eda1-a7a2-4998-9824-bc9ee0a4e687)
   ![image](https://github.com/user-attachments/assets/36c4c3eb-e8df-4653-a5f2-c7f155d22891)
+  ![image](https://github.com/user-attachments/assets/5e9129fb-77bd-4ed5-9e3f-43e5f7f97f25)
+
 
 
 
