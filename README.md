@@ -18,6 +18,12 @@ For more information on Autoinstall, please see:
 ## About Ubuntu24.04 Desktop automated installation  <br>
   I saw a lot of similar technical documents, there is no way to realize the real automation process, they are all through the url way to specify the autoinstall.yaml file to achieve, after I tested and found that Ubuntu24.04 Desktop completely unattended fully automated installation, namely I found that Ubuntu24.04 Desktop can be fully automated unattended installation, that is, userdata and meta-data to answer and start the installer, only that during the automatic installation of Ubuntu24.04 Desktop, it still pops up the GUI installation interface, but it will be executed automatically, that is, after booting from PXE or IPXE, the installer will pop up automatically to finish automatically, and then it will finish automatically according to the file “userdata”. userdata” file, it will reboot automatically, and then you can see the ubuntu desktop.
 You can also view the installation log during the whole automated installation process as shown below:
+  ![image](https://github.com/user-attachments/assets/bad56adb-38a7-4a07-a056-191d86355bfd)
+  ![image](https://github.com/user-attachments/assets/c00f85db-f245-4f7a-8183-5764e93fedb8)
+  ![image](https://github.com/user-attachments/assets/5ff1eda1-a7a2-4998-9824-bc9ee0a4e687)
+
+
+
 
 
 
@@ -232,16 +238,19 @@ autoinstall:
       ![image](https://github.com/user-attachments/assets/12df8197-2219-45c0-a100-e341995960f4)
 
 
-  2. 24.04_live_server Preview of system files and directories at deployment：
+  2. PXE boot, boot preview:
+    ![image](https://github.com/user-attachments/assets/fec18617-a856-4da8-b7aa-87eb1edef5db)
+
+  3. 24.04_live_server Preview of system files and directories at deployment：
       ![image](https://github.com/user-attachments/assets/53763127-7a58-4f45-9f17-fe9ef858e5b6)
      
-  3. 24.04_live_noble-desktop Preview of system files and directories at deployment：
+  4. 24.04_live_noble-desktop Preview of system files and directories at deployment：
      ![image](https://github.com/user-attachments/assets/07e5a623-8418-42ea-a26b-a53be429da25)
 
-  4. ........
+  5. ........
      
  ### Issues Summary
-  1. When I changed the apt installation source to my own internal address: http://172.17.80.238/ubuntu/, I found that the installation would sometimes fail, which could be due to a problem with the installation source server that I deployed internally using “apt mirror”, for example, the installation source failed to download some files. This may be due to a problem with the installation source server I deployed using “apt mirror” internally, for example, some files in the installation source failed to download, causing the installation source to be incomplete.
+  1. When I changed the apt installation source to my own internal address: “http://172.17.80.238/ubuntu/”, I found that the installation would sometimes fail, which could be due to a problem with the installation source server that I deployed internally using “apt mirror”, for example, the installation source failed to download some files. This may be due to a problem with the installation source server I deployed using “apt mirror” internally, for example, some files in the installation source failed to download, causing the installation source to be incomplete.
   
   2. Older computers are not supported。
      I in the VMware virtual machine to test automated ubuntu 24.04 desktop installation, the configuration of the virtual machine (16G + 16CPU + 100G HD), found that in the VMware virtualization environment can be installed successfully; but I changed to a laptop (my laptop is older, the model is Lenovo ThinkPad X260, it is) The configuration of my laptop is (cpu: i3-6100u, Memory: 8G; Samsung 870 SSD 500G), let the laptop boot from PXE, and finally the installer is stuck at “PreparingUbuntu.....”. I've tested this several times, and this is what happens. I'm analyzing that my laptop is too low-configured, and that ubuntu 24.04 doesn't support older computers when automating deployments with Cloud-Init and Subiquity?
