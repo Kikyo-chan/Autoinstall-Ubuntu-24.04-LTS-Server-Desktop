@@ -87,6 +87,5 @@ autoinstall:
     - chmod -R 600 /target/etc/netplan/
     - curtin in-target --target=/target -- sudo usermod -p '$6$jMIpAD1dGkm6sqfJ$HF6uWZp3lbYMjyI3jWUE1j51R9sqCkX8tjrp3xut2AWs3r2Ou9JGyZu1Xr7D3VF3B4X2gYCfjQatKoxAbDGSu0' root
     - curtin in-target --target=/target -- update-grub2
-    - curtin in-target --target=/target -- echo "Please wait...will reboot automatically"
     - reboot
   version: 1
