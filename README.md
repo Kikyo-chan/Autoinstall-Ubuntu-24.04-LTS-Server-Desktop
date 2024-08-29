@@ -32,12 +32,12 @@ You can also view the installation log during the whole automated installation p
 
 
 
-## Disclaimer
+## Disclaimer:
  All operations and installation tests here require the host to be set to UEFI mode, the traditional BIOS mode is outdated and I don't want to look into it.
 So, please do it in UEFI mode.
 
 
-## Ubuntu24.04 LTS Desktop Autoinstall (user-data)
+## Ubuntu24.04 LTS Desktop Autoinstall (user-data):
 ```yaml
 #cloud-config
 # See the autoinstall documentation at:
@@ -122,7 +122,7 @@ autoinstall:
     - reboot
   version: 1
 ```
-## Ubuntu24.04 LTS Server Autoinstall(user-data)
+## Ubuntu24.04 LTS Server Autoinstall(user-data):
 ```yaml
 #cloud-config
 autoinstall:
@@ -256,8 +256,9 @@ autoinstall:
      
  ### Issues Summary
   1. When I changed the apt installation source to my own internal address: “http://172.17.80.238/ubuntu/”, I found that the installation would sometimes fail, which could be due to a problem with the installation source server that I deployed internally using “apt mirror”, for example, the installation source failed to download some files. This may be due to a problem with the installation source server I deployed using “apt mirror” internally, for example, some files in the installation source failed to download, causing the installation source to be incomplete.
+     Configuring Ubuntu Local Repository (offline APT mirror) with “apt mirror” should be problematic, I see that the “apt-mirror” project ( I see that the “apt-mirror” project ( https://github.com/apt-mirror/apt-mirror ) hasn't been updated for a long time, and it may not support ubuntu 22.04-ubuntu 24.04 well, hopefully some awesome developer will fix these problems and help more users.
   
-  2. Older computers are not supported。
+  3. Older computers are not supported。
      I in the VMware virtual machine to test automated ubuntu 24.04 desktop installation, the configuration of the virtual machine (16G + 16CPU + 100G HD), found that in the VMware virtualization environment can be installed successfully; but I changed to a laptop (my laptop is older, the model is Lenovo ThinkPad X260, it is) The configuration of my laptop is (cpu: i3-6100u, Memory: 8G; Samsung 870 SSD 500G), let the laptop boot from PXE, and finally the installer is stuck at “PreparingUbuntu.....”. I've tested this several times, and this is what happens. I'm analyzing that my laptop is too low-configured, and that ubuntu 24.04 doesn't support older computers when automating deployments with Cloud-Init and Subiquity?
 In this case, I tested it on my newer DELL3640 Desktop computer (my DELL3640 desktop computer configuration: cpu:i5, Memory: 16G; Samsung870 SSD 500G), and found that my DELL desktop computer can also be installed normally, so what's the problem
 ![image](https://github.com/user-attachments/assets/0b73af60-9676-416e-95a4-7c71752f8faa)
