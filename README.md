@@ -1,11 +1,11 @@
-# Automate the installation of Ubuntu24.04 LTS Live-Server and Ubuntu24.04 LTS Desktop using Cloud-Init and Subiquity technologies. 
+# Automate the installation of Ubuntu24.04 LTS Server and Ubuntu24.04 LTS Desktop using Cloud-Init and Subiquity technologies. 
 
 ## Abstract
- This document describes the steps to automate the installation of the Ubuntu 22.04.x LTS Desktop using Cloud-Init and Subiquity technologies.   
+ This document describes the steps to automate the installation of the Ubuntu 22.04.x LTS Server and Desktop using Cloud-Init and Subiquity technologies.   
 
 
 ## Introduction
-  The Ubuntu24.04 LTS Live-Server and Ubuntu24.04 LTS Desktop ISO uses Subiquity, which means that the
+  The Ubuntu24.04 LTS Server and Ubuntu24.04 LTS Desktop ISO uses Subiquity, which means that the
 Subiquity Autoinstall format is used for automation.
 * [Desktop Latest images](https://cdimage.ubuntu.com/daily-live/current/).
 * [Server Latest images](https://cdimage.ubuntu.com/ubuntu-server/noble/daily-live/current/).
