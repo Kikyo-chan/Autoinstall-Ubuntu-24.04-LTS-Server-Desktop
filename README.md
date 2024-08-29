@@ -1,7 +1,7 @@
 # Automate the installation of Ubuntu24.04 LTS Server and Ubuntu24.04 LTS Desktop using Cloud-Init and Subiquity technologies. 
 
 ## Abstract
- This document describes the steps to automate the installation of the Ubuntu 22.04.x LTS Server and Desktop using Cloud-Init and Subiquity technologies.   
+ This document describes the steps to automate the installation of the Ubuntu 24.04.x LTS Server and Desktop using Cloud-Init and Subiquity technologies.   
 
 
 ## Introduction
