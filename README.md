@@ -153,10 +153,9 @@ autoinstall:
     realname: ''
     hostname: ubuntu
     username: ubuntu
-    # password is xxxxxxxxx
     password: '$6$jMIpAD1dGkm6sqfJ$HF6uWZp3lbYMjyI3jWUE1j51R9sqCkX8tjrp3xut2AWs3r2Ou9JGyZu1Xr7D3VF3B4X2gYCfjQatKoxAbDGSu0'
-#  kernel:
-#    package: linux-generic
+  kernel:
+    package: linux-generic
   keyboard:
     layout: us
     toggle: null
@@ -197,7 +196,6 @@ autoinstall:
     - chmod -R 600 /target/etc/netplan/
     - curtin in-target --target=/target -- sudo usermod -p '$6$jMIpAD1dGkm6sqfJ$HF6uWZp3lbYMjyI3jWUE1j51R9sqCkX8tjrp3xut2AWs3r2Ou9JGyZu1Xr7D3VF3B4X2gYCfjQatKoxAbDGSu0' root
     - curtin in-target --target=/target -- update-grub2
-    - curtin in-target --target=/target -- echo "Please wait...will reboot automatically"
     - reboot
   version: 1
 ```
@@ -218,7 +216,7 @@ autoinstall:
      kernel ${base-url}/casper/vmlinuz
      initrd ${base-url}/casper/initrd
      set ubuntu_iso_url ${base-url}/noble-live-server-amd64.iso
-     #imgargs vmlinuz initrd=initrd ip=dhcp root=/dev/ram0 ramdisk_size=1688608 url=${ubuntu_iso_url} autoinstall ds=nocloud-net;s=${base-url}/
+     #imgargs vmlinuz initrd=initrd ip=dhcp root=/dev/ram0 ramdisk_size=8388608 url=${ubuntu_iso_url} autoinstall ds=nocloud-net;s=${base-url}/
      imgargs vmlinuz initrd=initrd ip=dhcp cloud-config-url=/dev/null url=${ubuntu_iso_url} autoinstall ds=nocloud-net;s=${base-url}/
      boot || goto failed
      ```
